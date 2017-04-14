@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Psychic Game </title>
+	
+</head>
+<body background="http://i0.kym-cdn.com/entries/icons/facebook/000/006/077/so_good.jpg">
+
+<h1><strong> Psychic Guessing # Game </h1></strong>
+<script>
+	
+	var randomNumber  =  getrandomNumber(10); // Letters not working??//
+
+	var guess; 
+
+	var guesscount = 0; 
+
+	var correctGuess = false; 
+
+	function getrandomNumber(upper){
+		var num = Math.floor(Math.random()*upper)  + 1 
+
+		return num;
+
+	}
+
+	while(true){
+		guess = prompt("Pick a number between 1 and 10");
+		guesscount  += 1;
+
+		if(parseInt(guess) === randomNumber){
+			correctGuess = true;
+
+			break;
+		}
+
+	}
+		//Needs spacing between words // ???
+	document.write("<h1>You guessed right!!!</h1>");
+	document.write(" It took ",   +    guesscount  +   "attempts to guess the number " ,  +   randomNumber  );
+
+
+
+
+
+</script>
+	
+</body>
+</html>
